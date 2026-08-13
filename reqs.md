@@ -26,7 +26,7 @@
 1. El usuario accede a "Crear cuenta" o "Iniciar sesión".
 2. Selecciona **"Continuar con Google"**.
 3. El sistema redirige al usuario al proceso de autenticación de Google.
-4. El usuario autoriza a Huellitas a Casa a obtener la información básica de su cuenta.
+4. El usuario autoriza a Huellitas a Casa a obtene r la información básica de su cuenta.
 5. Google devuelve la información de autenticación al sistema.
 6. El sistema verifica la identidad y crea la cuenta si no existe.
 7. Si la cuenta ya existe, el sistema inicia sesión.
