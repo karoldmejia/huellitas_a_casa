@@ -3,10 +3,12 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ScheduleModule } from '@nestjs/schedule';
 
-
-import configuration from './config/configuration';
 import { AuthModule } from './modules/auth/auth.module';
 import { UsersModule } from './modules/users/users.module';
+import { ReportsModule } from './modules/reports/reports.module';
+import { PhotosModule } from './modules/photos/photos.module';
+
+import configuration from './config/configuration';
 
 @Module({
   imports: [
@@ -25,7 +27,7 @@ import { UsersModule } from './modules/users/users.module';
         database: configService.get('database.database'),
         entities: [__dirname + '/**/*.entity{.ts,.js}'],
         migrations: [__dirname + '/database/migrations/*{.ts,.js}'],
-        synchronize: false, // IMPORTANTE: false en producción
+        synchronize: false,
         logging: configService.get('nodeEnv') === 'development',
         ssl: configService.get('nodeEnv') === 'production',
       }),
@@ -34,6 +36,8 @@ import { UsersModule } from './modules/users/users.module';
     ScheduleModule.forRoot(),
     AuthModule,
     UsersModule,
+    ReportsModule,
+    PhotosModule,
   ],
 })
 export class AppModule {}

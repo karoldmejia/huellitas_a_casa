@@ -1,0 +1,14 @@
+export enum AbuseReason {
+    SPAM = 'SPAM',
+    INAPPROPRIATE = 'INAPPROPRIATE',
+    FALSE_INFORMATION = 'FALSE_INFORMATION',
+    DUPLICATE = 'DUPLICATE',
+    OTHER = 'OTHER',
+}
+
+export enum AbuseStatus {
+    PENDING = 'PENDING',
+    REVIEWED = 'REVIEWED',
+    RESOLVED = 'RESOLVED',
+    REJECTED = 'REJECTED',
+}
